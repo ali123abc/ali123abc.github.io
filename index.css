@@ -1,5 +1,9 @@
 body {
-    background-color: #333;
+    background-image:url(/Images/sky.jpg);
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover;
+    background-size: cover;
     font-family: 'Your Custom Font', sans-serif;
   }
   
@@ -7,17 +11,19 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 250px;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 40px;
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
   }
   
   label {
     display: block;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
   input[type="text"],
@@ -25,9 +31,12 @@ body {
     display: block;
     width: 100%;
     padding: 10px;
+    color: black;
+    background-color: #CACFD2;
+    width: 200px;
     border-radius: 5px;
     border: none;
-    margin-bottom: 20px;
+    margin-bottom: 2px;
   }
   
   input[type="submit"] {
