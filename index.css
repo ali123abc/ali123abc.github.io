@@ -1,7 +1,7 @@
 body {
     background-image:url(/Images/sky.jpg);
-    -webkit-background-size: cover; 
-    -moz-background-size: cover; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Your Custom Font', sans-serif;
