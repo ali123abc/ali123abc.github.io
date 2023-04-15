@@ -1,0 +1,50 @@
+/* Style for the banner */
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #333;
+  }
+  
+  /* Style for the banner buttons */
+  .banner button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium';
+  }
+  
+  /* Style for the main box */
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Subtract banner height from viewport height */
+    background-image: url("/Images/sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* Style for the main box content */
+  .main-content {
+    max-width: 1000px;
+    max-height: 400px;
+    padding: 15px;
+    border: 1px solid green;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+  

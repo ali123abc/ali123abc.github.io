@@ -1,19 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="index.css">
     <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
   </head>
   <body>
-    <h1>Welcome, <span id="username"></span>!</h1>
-    <script>
-      // Get the username from the URL query string
-      const params = new URLSearchParams(window.location.search);
-      const username = params.get('username');
+    <div class="banner">
+      <button>Home</button>
+      <button>Lights</button>
+      <button>Logitech Devices</button>
+      <button>Alexa / Siri </button>
+    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="main-content">
+          <h2>Welcome Alistair</h2>
+          <div class="info">
+            <p>Current date & time: <span id="datetime"></span></p>
+            <p>Weather in Southampton: <span id="description"></span></p>
+            <script>
+              // Define a function to update the "datetime" element with the current date and time
+              function updateDateTime() {
+                var now = new Date();
+                document.getElementById("datetime").innerHTML = now.toLocaleString();
+              }
+            
+              // Call the "updateDateTime" function once to set the initial content
+              updateDateTime();
+            
+              // Call the "updateDateTime" function every second to update the content dynamically
+              setInterval(updateDateTime, 1000);
+            </script>
 
-      // Set the username in the page content
-      const usernameEl = document.getElementById('username');
-      usernameEl.textContent = username;
-    </script>
+            <script>
+              let apiKey = '7233c7498f634085abb161829231504';
+              let city = 'Southampton';
+              let url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+
+              fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                  // Extract the relevant weather information from the data object
+                  let temperature = data.current.temp_c;
+                  let description = data.current.condition.text;
+                  // Update the UI with the weather information
+                  document.getElementById('temperature').innerHTML = temperature;
+                  document.getElementById('description').innerHTML = description;
+                })
+                .catch(error => {
+                  console.error('Error fetching weather data:', error);
+                });
+            </script>
+          </div>
+        </div>
+        
+      </div>
+    </div>
   </body>
 </html>
