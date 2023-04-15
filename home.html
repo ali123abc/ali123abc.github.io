@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="index.css">
     <title>Home Page</title>
   </head>
   <body>
-    <h1>Welcome to the Home Page</h1>
-    <p>This is the home page of our website. You can add any content you want here. tes</p>
+    <h1>Welcome, <span id="username"></span>!</h1>
+    <script>
+      // Get the username from the URL query string
+      const params = new URLSearchParams(window.location.search);
+      const username = params.get('username');
+
+      // Set the username in the page content
+      const usernameEl = document.getElementById('username');
+      usernameEl.textContent = username;
+    </script>
   </body>
 </html>
