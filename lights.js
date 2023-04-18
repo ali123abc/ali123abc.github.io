@@ -1,6 +1,6 @@
 async function getLights() {
   try {
-    const response = await fetch('http://192.168.0.5/api/ZknBL-Ryw3Qmi7P73yabgNbc958uXwav2oJhPUtk/lights');
+    const response = await fetch('https://192.168.0.5/api/ZknBL-Ryw3Qmi7P73yabgNbc958uXwav2oJhPUtk/lights');
     const lights = await response.json();
 
     const statusBox = document.querySelector('.status-box');
@@ -26,7 +26,7 @@ async function getLights() {
         toggleButton.addEventListener('click', async () => {
           const newState = !light.state.on;
           try {
-            const url = `http://192.168.0.5/api/ZknBL-Ryw3Qmi7P73yabgNbc958uXwav2oJhPUtk/lights/${key}/state`;
+            const url = `https://192.168.0.5/api/ZknBL-Ryw3Qmi7P73yabgNbc958uXwav2oJhPUtk/lights/${key}/state`;
             const method = 'PUT';
             const body = JSON.stringify({ on: newState });
             const response = await fetch(url, { method, body });
