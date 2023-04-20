@@ -29,17 +29,24 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 80px;
-    background-color: #333;
+    background-color: rgba(0, 0, 117); /* dark blue with 50% opacity */
   }
-
+  
   .banner button {
     margin: 0 10px;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #8A8AFF; /* light purple */
+    color: #fff; /* white text */
     font-size: 16px;
     cursor: pointer;
     font-family: 'Franklin Gothic Medium';
+    transition: background-color 0.3s ease-in-out; /* transition for hover effect */
+    outline: none;
+    text-decoration: none;
+  }
+  
+  .banner button:hover {
+    background-color: #7D52A1; /* dark purple on hover */
   }
