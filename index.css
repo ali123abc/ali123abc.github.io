@@ -1,62 +1,51 @@
+/* index.css */
 
+/* Reset some default styles */
 html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  body {
-    background-image: url(/Images/sky.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
+  margin: 0;
+  padding: 0;
+}
 
+/* Set a background color */
+body {
+  background-color: #f2f2f2;
+}
 
-  
-  form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 250px;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #0000A3;
-  }
-  
-  input[type="text"],
-  input[type="password"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    color: black;
-    background-color: #CACFD2;
-    width: 200px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 2px;
-  }
-  
-  input[type="submit"] {
-    background-color:#5C5CFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #2E2EFF;
-  }
-  
+/* Center the form */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Style the form elements */
+form label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px;
+  font-size: 16px;
+}
+
+form input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #555;
+}
+
