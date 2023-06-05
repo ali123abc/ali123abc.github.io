@@ -26,15 +26,17 @@
         // You can redirect or perform any other actions here
       })
       .catch((error) => {
-        // Handle any errors that occur during login
+        // Handle login errors
         var errorCode = error.code;
         var errorMessage = error.message;
         console.log(errorMessage);
+        // Display error message to the user
+        window.alert(errorMessage);
       });
   }
 
   // Handle form submission
-  document.querySelector("form").addEventListener("submit", function(event) {
+  document.getElementById("loginForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent form submission
 
     // Get username and password values
