@@ -24,14 +24,15 @@
         messagingSenderId: "41672593945",
         appId: "1:41672593945:web:6ee3953eaf5b5682715088"
       };
-      const app = initializeApp(firebaseConfig);
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
 
       // Get the Auth service instance
-      const auth = getAuth(app);
+      const auth = firebase.auth();
 
       // Login function
       function login(email, password) {
-        signInWithEmailAndPassword(auth, email, password)
+        auth.signInWithEmailAndPassword(email, password)
           .then((userCredential) => {
             // User login successful
             const user = userCredential.user;
