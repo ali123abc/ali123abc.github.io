@@ -35,14 +35,13 @@
       });
   }
 
-  // Handle form submission
   document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-
+    event.preventDefault(); // Prevent default form submission behavior
+  
     // Get username and password values
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
-
+  
     // Call the login function
     login(username, password);
   });
