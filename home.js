@@ -12,7 +12,7 @@ function updateDateTime() {
   
   function getWeatherData() {
     let apiKey = '7233c7498f634085abb161829231504';
-    let city = 'Southampton';
+    let city = 'Barnstaple';
     let url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
   
     fetch(url)
