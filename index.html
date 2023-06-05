@@ -24,7 +24,6 @@
         messagingSenderId: "41672593945",
         appId: "1:41672593945:web:6ee3953eaf5b5682715088"
     };
-
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
@@ -35,7 +34,8 @@
             // User login successful
             var user = userCredential.user;
             console.log("User logged in:", user.email);
-            // You can redirect or perform any other actions here
+            // Redirect to the home page or perform any other actions here
+            window.location.href = "home.html"; // Replace "home.html" with your actual home page URL
           })
           .catch((error) => {
             // Handle login errors
