@@ -5,7 +5,7 @@
     <title>Login Page</title>
   </head>
   <body>
-    <form id="loginForm">
+    <form id="loginForm" method="POST">
       <label for="username">Username:</label>
       <input type="text" id="username" name="username" required><br><br>
       <label for="password">Password:</label>
@@ -16,14 +16,14 @@
     <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
     <script>
       // Your web app's Firebase configuration
-      var firebaseConfig = {
+      const firebaseConfig = {
         apiKey: "AIzaSyAyOBK1TFLUN6MCg3MABnVjJ-FBms3yV1c",
         authDomain: "webdev-e9a65.firebaseapp.com",
         projectId: "webdev-e9a65",
         storageBucket: "webdev-e9a65.appspot.com",
         messagingSenderId: "41672593945",
         appId: "1:41672593945:web:6ee3953eaf5b5682715088"
-    };
+      };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
 
