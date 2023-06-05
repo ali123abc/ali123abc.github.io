@@ -12,8 +12,52 @@
       <input type="password" id="password" name="password" required><br><br>
       <input type="submit" value="Submit">
     </form>
-    <script src="home.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyAyOBK1TFLUN6MCg3MABnVjJ-FBms3yV1c",
+        authDomain: "webdev-e9a65.firebaseapp.com",
+        projectId: "webdev-e9a65",
+        storageBucket: "webdev-e9a65.appspot.com",
+        messagingSenderId: "41672593945",
+        appId: "1:41672593945:web:6ee3953eaf5b5682715088"
+    };
+
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      // Login function
+      function login(email, password) {
+        firebase.auth().signInWithEmailAndPassword(email, password)
+          .then((userCredential) => {
+            // User login successful
+            var user = userCredential.user;
+            console.log("User logged in:", user.email);
+            // You can redirect or perform any other actions here
+          })
+          .catch((error) => {
+            // Handle login errors
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorMessage);
+            // Display error message to the user
+            window.alert(errorMessage);
+          });
+      }
+
+      // Handle form submission
+      document.getElementById("loginForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        // Get username and password values
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Call the login function
+        login(username, password);
+      });
+    </script>
   </body>
 </html>
